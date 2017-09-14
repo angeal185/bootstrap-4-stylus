@@ -1,0 +1,43 @@
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block
+    width 100%
+
+.fade
+    opacity 0
+    transition opacity 0.15s linear
+    &.show
+        opacity 1
+
+.collapse
+    display none
+    &.show
+        display block
+
+tr
+    &.collapse
+        &.show
+            display table-row
+
+tbody
+    &.collapse
+        &.show
+            display table-row-group
+
+.collapsing
+    position relative
+    height 0
+    overflow hidden
+    transition height 0.35s ease
+
+.show
+    & > a
+        outline 0
+
+[data-toggle="buttons"] > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"]
+    position absolute
+    clip rect(0, 0, 0, 0)
+    pointer-events none
