@@ -1,0 +1,21 @@
+.btn-light
+    color #111
+    background-color $light
+    border-color $light
+    &:hover
+        color #111
+        background-color $lightBtnHov
+        border-color $lightHov
+
+.btn-light:focus, .btn-light.focus
+    box-shadow 0 0 0 3px rgba(248, 249, 250, 0.5)
+
+.btn-light.disabled, .btn-light:disabled
+    background-color $light
+    border-color $light
+
+.btn-light:active, .btn-light.active,
+.show > .btn-light.dropdown-toggle
+    background-color $lightBtnHov
+    background-image none
+    border-color $lightHov

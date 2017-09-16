@@ -1,0 +1,22 @@
+.btn-outline-danger
+    color $danger
+    background-color transparent
+    background-image none
+    border-color $danger
+    &:hover
+        color $white
+        background-color $danger
+        border-color $danger
+
+.btn-outline-danger:focus, .btn-outline-danger.focus
+    box-shadow 0 0 0 3px rgba(220, 53, 69, 0.5)
+
+.btn-outline-danger.disabled, .btn-outline-danger:disabled
+    color $danger
+    background-color transparent
+
+.btn-outline-danger:active, .btn-outline-danger.active,
+.show > .btn-outline-danger.dropdown-toggle
+    color $white
+    background-color $danger
+    border-color $danger

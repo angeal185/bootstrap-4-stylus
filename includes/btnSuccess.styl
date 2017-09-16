@@ -1,0 +1,21 @@
+.btn-success
+    color $white
+    background-color $success
+    border-color $success
+    &:hover
+        color $white
+        background-color $successBtnHov
+        border-color $successHov
+
+.btn-success:focus, .btn-success.focus
+    box-shadow 0 0 0 3px rgba(40, 167, 69, 0.5)
+
+.btn-success.disabled, .btn-success:disabled
+    background-color $success
+    border-color $success
+
+.btn-success:active, .btn-success.active,
+.show > .btn-success.dropdown-toggle
+    background-color $successBtnHov
+    background-image none
+    border-color $successHov

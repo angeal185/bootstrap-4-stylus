@@ -11,7 +11,7 @@
     display block
     padding 0.5rem 1rem
     &.disabled
-        color #868e96
+        color $secondary
 
 .nav-link:focus, .nav-link:hover
     text-decoration none
@@ -25,7 +25,7 @@
         border-top-left-radius 0.25rem
         border-top-right-radius 0.25rem
         &.disabled
-            color #868e96
+            color $secondary
             background-color transparent
             border-color transparent
     .dropdown-menu
@@ -39,8 +39,8 @@
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link
     color #495057
-    background-color #fff
-    border-color #ddd #ddd #fff
+    background-color $white
+    border-color #ddd #ddd $white
 
 .nav-pills
     .nav-link
@@ -48,8 +48,8 @@
 
 .nav-pills .nav-link.active,
 .show > .nav-pills .nav-link
-    color #fff
-    background-color #007bff
+    color $white
+    background-color $primary
 
 .nav-fill
     .nav-item
@@ -158,7 +158,7 @@
         padding-right 0
         padding-left 0
 
-@media (min-width: 576px)
+@media (min-width: $grid-sm)
     .navbar-expand-sm
         -ms-flex-direction row
         flex-direction row
@@ -192,7 +192,7 @@
         padding-right 0
         padding-left 0
 
-@media (min-width: 768px)
+@media (min-width: $grid-md)
     .navbar-expand-md
         -ms-flex-direction row
         flex-direction row
@@ -226,7 +226,7 @@
         padding-right 0
         padding-left 0
 
-@media (min-width: 992px)
+@media (min-width: $grid-lg)
     .navbar-expand-lg
         -ms-flex-direction row
         flex-direction row
@@ -260,7 +260,7 @@
         padding-right 0
         padding-left 0
 
-@media (min-width: 1200px)
+@media (min-width: $grid-xl)
     .navbar-expand-xl
         -ms-flex-direction row
         flex-direction row

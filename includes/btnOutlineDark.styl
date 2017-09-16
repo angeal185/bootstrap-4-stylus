@@ -1,0 +1,22 @@
+.btn-outline-dark
+    color $dark
+    background-color transparent
+    background-image none
+    border-color $dark
+    &:hover
+        color $white
+        background-color $dark
+        border-color $dark
+
+.btn-outline-dark:focus, .btn-outline-dark.focus
+    box-shadow 0 0 0 3px rgba(52, 58, 64, 0.5)
+
+.btn-outline-dark.disabled, .btn-outline-dark:disabled
+    color $dark
+    background-color transparent
+
+.btn-outline-dark:active, .btn-outline-dark.active,
+.show > .btn-outline-dark.dropdown-toggle
+    color $white
+    background-color $dark
+    border-color $dark

@@ -17,14 +17,14 @@
 .list-group-item-action:focus, .list-group-item-action:hover
     color #495057
     text-decoration none
-    background-color #f8f9fa
+    background-color $light
 
 .list-group-item
     position relative
     display block
     padding 0.75rem 1.25rem
     margin-bottom -1px
-    background-color #fff
+    background-color $white
     border 1px solid rgba(0, 0, 0, 0.125)
     &:first-child
         border-top-left-radius 0.25rem
@@ -35,16 +35,16 @@
         border-bottom-left-radius 0.25rem
     &.active
         z-index 2
-        color #fff
-        background-color #007bff
-        border-color #007bff
+        color $white
+        background-color $primary
+        border-color $primary
 
 .list-group-item:focus, .list-group-item:hover
     text-decoration none
 
 .list-group-item.disabled, .list-group-item:disabled
-    color #868e96
-    background-color #fff
+    color $secondary
+    background-color $white
 
 .list-group-flush
     .list-group-item
@@ -76,7 +76,7 @@ button.list-group-item-primary:hover
 
 a.list-group-item-primary.active,
 button.list-group-item-primary.active
-    color #fff
+    color $white
     background-color #004085
     border-color #004085
 
@@ -96,7 +96,7 @@ button.list-group-item-secondary:hover
 
 a.list-group-item-secondary.active,
 button.list-group-item-secondary.active
-    color #fff
+    color $white
     background-color #464a4e
     border-color #464a4e
 
@@ -116,7 +116,7 @@ button.list-group-item-success:hover
 
 a.list-group-item-success.active,
 button.list-group-item-success.active
-    color #fff
+    color $white
     background-color #155724
     border-color #155724
 
@@ -136,7 +136,7 @@ button.list-group-item-info:hover
 
 a.list-group-item-info.active,
 button.list-group-item-info.active
-    color #fff
+    color $white
     background-color #0c5460
     border-color #0c5460
 
@@ -156,7 +156,7 @@ button.list-group-item-warning:hover
 
 a.list-group-item-warning.active,
 button.list-group-item-warning.active
-    color #fff
+    color $white
     background-color #856404
     border-color #856404
 
@@ -176,7 +176,7 @@ button.list-group-item-danger:hover
 
 a.list-group-item-danger.active,
 button.list-group-item-danger.active
-    color #fff
+    color $white
     background-color #721c24
     border-color #721c24
 
@@ -196,7 +196,7 @@ button.list-group-item-light:hover
 
 a.list-group-item-light.active,
 button.list-group-item-light.active
-    color #fff
+    color $white
     background-color #818182
     border-color #818182
 
@@ -216,6 +216,6 @@ button.list-group-item-dark:hover
 
 a.list-group-item-dark.active,
 button.list-group-item-dark.active
-    color #fff
+    color $white
     background-color #1b1e21
     border-color #1b1e21

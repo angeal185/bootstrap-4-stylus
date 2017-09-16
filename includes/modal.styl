@@ -37,7 +37,7 @@
     display flex
     -ms-flex-direction column
     flex-direction column
-    background-color #fff
+    background-color $white
     background-clip padding-box
     border 1px solid rgba(0, 0, 0, 0.2)
     border-radius 0.3rem
@@ -50,7 +50,7 @@
     bottom 0
     left 0
     z-index 1040
-    background-color #000
+    background-color $black
     &.fade
         opacity 0
     &.show
@@ -97,13 +97,13 @@
     height 50px
     overflow scroll
 
-@media (min-width: 576px)
+@media (min-width: $grid-sm)
     .modal-dialog
         max-width 500px
         margin 30px auto
     .modal-sm
         max-width 300px
 
-@media (min-width: 992px)
+@media (min-width: $grid-lg)
     .modal-lg
         max-width 800px

@@ -1,0 +1,23 @@
+.btn-link
+    font-weight $font-weight-normal
+    color $primary
+    border-radius 0
+    &:hover
+        border-color transparent
+    &:disabled
+        color $secondary
+
+.btn-link, .btn-link:active, .btn-link.active, .btn-link:disabled
+    background-color transparent
+
+.btn-link, .btn-link:focus, .btn-link:active
+    border-color transparent
+    box-shadow none
+
+.btn-link:focus, .btn-link:hover
+    color #0056b3
+    text-decoration underline
+    background-color transparent
+
+.btn-link:disabled:focus, .btn-link:disabled:hover
+    text-decoration none

@@ -1,0 +1,22 @@
+.btn-outline-secondary
+    color $secondary
+    background-color transparent
+    background-image none
+    border-color $secondary
+    &:hover
+        color $white
+        background-color $secondary
+        border-color $secondary
+
+.btn-outline-secondary:focus, .btn-outline-secondary.focus
+    box-shadow 0 0 0 3px rgba(134, 142, 150, 0.5)
+
+.btn-outline-secondary.disabled, .btn-outline-secondary:disabled
+    color $secondary
+    background-color transparent
+
+.btn-outline-secondary:active, .btn-outline-secondary.active,
+.show > .btn-outline-secondary.dropdown-toggle
+    color $white
+    background-color $secondary
+    border-color $secondary

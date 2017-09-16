@@ -5,7 +5,7 @@
     font-size 1rem
     line-height 1.25
     color #495057
-    background-color #fff
+    background-color $white
     background-image none
     background-clip padding-box
     border 1px solid rgba(0, 0, 0, 0.15)
@@ -16,17 +16,17 @@
         border 0
     &:focus
         color #495057
-        background-color #fff
+        background-color $white
         border-color #80bdff
         outline none
     &::-webkit-input-placeholder
-        color #868e96
+        color $secondary
         opacity 1
     &:-ms-input-placeholder
-        color #868e96
+        color $secondary
         opacity 1
     &::placeholder
-        color #868e96
+        color $secondary
         opacity 1
 
 .form-control:disabled, .form-control[readonly]
@@ -40,7 +40,7 @@ select
         &:focus
             &::-ms-value
                 color #495057
-                background-color #fff
+                background-color $white
 
 .form-control-file,
 .form-control-range
@@ -135,7 +135,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     margin-bottom 0.5rem
     &.disabled
         .form-check-label
-            color #868e96
+            color $secondary
 
 .form-check-label
     padding-left 1.25rem
@@ -159,7 +159,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     display none
     margin-top .25rem
     font-size .875rem
-    color #dc3545
+    color $danger
 
 .invalid-tooltip
     position absolute
@@ -171,14 +171,14 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     margin-top .1rem
     font-size .875rem
     line-height 1
-    color #fff
+    color $white
     background-color rgba(220, 53, 69, 0.8)
     border-radius .2rem
 
 .was-validated .form-control:valid, .form-control.is-valid, .was-validated
 .custom-select:valid,
 .custom-select.is-valid
-    border-color #28a745
+    border-color $success
 
 .was-validated .form-control:valid:focus, .form-control.is-valid:focus, .was-validated
 .custom-select:valid:focus,
@@ -196,16 +196,16 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     display block
 
 .was-validated .form-check-input:valid + .form-check-label, .form-check-input.is-valid + .form-check-label
-    color #28a745
+    color $success
 
 .was-validated .custom-control-input:valid ~ .custom-control-indicator, .custom-control-input.is-valid ~ .custom-control-indicator
     background-color rgba(40, 167, 69, 0.25)
 
 .was-validated .custom-control-input:valid ~ .custom-control-description, .custom-control-input.is-valid ~ .custom-control-description
-    color #28a745
+    color $success
 
 .was-validated .custom-file-input:valid ~ .custom-file-control, .custom-file-input.is-valid ~ .custom-file-control
-    border-color #28a745
+    border-color $success
 
 .was-validated .custom-file-input:valid ~ .custom-file-control::before, .custom-file-input.is-valid ~ .custom-file-control::before
     border-color inherit
@@ -216,7 +216,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .was-validated .form-control:invalid, .form-control.is-invalid, .was-validated
 .custom-select:invalid,
 .custom-select.is-invalid
-    border-color #dc3545
+    border-color $danger
 
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus, .was-validated
 .custom-select:invalid:focus,
@@ -234,16 +234,16 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     display block
 
 .was-validated .form-check-input:invalid + .form-check-label, .form-check-input.is-invalid + .form-check-label
-    color #dc3545
+    color $danger
 
 .was-validated .custom-control-input:invalid ~ .custom-control-indicator, .custom-control-input.is-invalid ~ .custom-control-indicator
     background-color rgba(220, 53, 69, 0.25)
 
 .was-validated .custom-control-input:invalid ~ .custom-control-description, .custom-control-input.is-invalid ~ .custom-control-description
-    color #dc3545
+    color $danger
 
 .was-validated .custom-file-input:invalid ~ .custom-file-control, .custom-file-input.is-invalid ~ .custom-file-control
-    border-color #dc3545
+    border-color $danger
 
 .was-validated .custom-file-input:invalid ~ .custom-file-control::before, .custom-file-input.is-invalid ~ .custom-file-control::before
     border-color inherit
@@ -261,7 +261,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .form-check
         width 100%
 
-@media (min-width: 576px)
+@media (min-width: $grid-sm)
     .form-inline
         label
             display -ms-flexbox

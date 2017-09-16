@@ -12,20 +12,20 @@
     opacity 0
     &:checked
         & ~ .custom-control-indicator
-            color #fff
-            background-color #007bff
+            color $white
+            background-color $primary
     &:focus
         & ~ .custom-control-indicator
-            box-shadow 0 0 0 1px #fff, 0 0 0 3px #007bff
+            box-shadow 0 0 0 1px $white, 0 0 0 3px $primary
     &:active
         & ~ .custom-control-indicator
-            color #fff
+            color $white
             background-color #b3d7ff
     &:disabled
         & ~ .custom-control-indicator
             background-color #e9ecef
         & ~ .custom-control-description
-            color #868e96
+            color $secondary
 
 .custom-control-indicator
     position absolute
@@ -54,7 +54,7 @@
                 charset=utf8,%3Csvg xmlns='http //www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E")
         &:indeterminate
             & ~ .custom-control-indicator
-                background-color #007bff
+                background-color $primary
                 background-image url("data:image/svg+xml
                 charset=utf8,%3Csvg xmlns='http //www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E")
 
@@ -85,7 +85,7 @@
     line-height 1.25
     color #495057
     vertical-align middle
-    background #fff url("data:image/svg+xml
+    background $white url("data:image/svg+xml
     charset=utf8,%3Csvg xmlns='http //www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center
     background-size 8px 10px
     border 1px solid rgba(0, 0, 0, 0.15)
@@ -98,9 +98,9 @@
         outline none
         &::-ms-value
             color #495057
-            background-color #fff
+            background-color $white
     &:disabled
-        color #868e96
+        color $secondary
         background-color #e9ecef
     &::-ms-expand
         opacity 0
@@ -140,7 +140,7 @@
     -moz-user-select none
     -ms-user-select none
     user-select none
-    background-color #fff
+    background-color $white
     border 1px solid rgba(0, 0, 0, 0.15)
     border-radius 0.25rem
     &:lang(en):empty

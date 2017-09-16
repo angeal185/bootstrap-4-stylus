@@ -1,0 +1,21 @@
+.btn-warning
+    color #111
+    background-color $warning
+    border-color $warning
+    &:hover
+        color #111
+        background-color $warningBtnHov
+        border-color $warningHov
+
+.btn-warning:focus, .btn-warning.focus
+    box-shadow 0 0 0 3px rgba(255, 193, 7, 0.5)
+
+.btn-warning.disabled, .btn-warning:disabled
+    background-color $warning
+    border-color $warning
+
+.btn-warning:active, .btn-warning.active,
+.show > .btn-warning.dropdown-toggle
+    background-color $warningBtnHov
+    background-image none
+    border-color $warningHov

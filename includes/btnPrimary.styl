@@ -1,0 +1,21 @@
+.btn-primary
+    color $white
+    background-color $primary
+    border-color $primary
+    &:hover
+        color $white
+        background-color $primaryBtnHov
+        border-color $primaryHov
+
+.btn-primary:focus, .btn-primary.focus
+    box-shadow 0 0 0 3px rgba(0, 123, 255, 0.5)
+
+.btn-primary.disabled, .btn-primary:disabled
+    background-color $primary
+    border-color $primary
+
+.btn-primary:active, .btn-primary.active,
+.show > .btn-primary.dropdown-toggle
+    background-color $primaryBtnHov
+    background-image none
+    border-color $primaryHov

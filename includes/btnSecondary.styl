@@ -1,0 +1,21 @@
+.btn-secondary
+    color $white
+    background-color $secondary
+    border-color $secondary
+    &:hover
+        color $white
+        background-color $secondaryBtnHov
+        border-color $secondaryHov
+
+.btn-secondary:focus, .btn-secondary.focus
+    box-shadow 0 0 0 3px rgba(134, 142, 150, 0.5)
+
+.btn-secondary.disabled, .btn-secondary:disabled
+    background-color $secondary
+    border-color $secondary
+
+.btn-secondary:active, .btn-secondary.active,
+.show > .btn-secondary.dropdown-toggle
+    background-color $secondaryBtnHov
+    background-image none
+    border-color $secondaryHov

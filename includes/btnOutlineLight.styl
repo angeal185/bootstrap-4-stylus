@@ -1,0 +1,22 @@
+.btn-outline-light
+    color $light
+    background-color transparent
+    background-image none
+    border-color $light
+    &:hover
+        color $white
+        background-color $light
+        border-color $light
+
+.btn-outline-light:focus, .btn-outline-light.focus
+    box-shadow 0 0 0 3px rgba(248, 249, 250, 0.5)
+
+.btn-outline-light.disabled, .btn-outline-light:disabled
+    color $light
+    background-color transparent
+
+.btn-outline-light:active, .btn-outline-light.active,
+.show > .btn-outline-light.dropdown-toggle
+    color $white
+    background-color $light
+    border-color $light

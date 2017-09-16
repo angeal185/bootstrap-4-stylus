@@ -1,52 +1,6 @@
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6
-    margin-bottom 0.5rem
-    font-family inherit
-    font-weight 500
-    line-height 1.1
-    color inherit
-
-h1, .h1
-    font-size 2.5rem
-
-h2, .h2
-    font-size 2rem
-
-h3, .h3
-    font-size 1.75rem
-
-h4, .h4
-    font-size 1.5rem
-
-h5, .h5
-    font-size 1.25rem
-
-h6, .h6
-    font-size 1rem
-
 .lead
     font-size 1.25rem
     font-weight 300
-
-.display-1
-    font-size 6rem
-    font-weight 300
-    line-height 1.1
-
-.display-2
-    font-size 5.5rem
-    font-weight 300
-    line-height 1.1
-
-.display-3
-    font-size 4.5rem
-    font-weight 300
-    line-height 1.1
-
-.display-4
-    font-size 3.5rem
-    font-weight 300
-    line-height 1.1
 
 hr
     margin-top 1rem
@@ -57,7 +11,7 @@ hr
 small,
 .small
     font-size 80%
-    font-weight normal
+    font-weight $font-weight-normal
 
 mark,
 .mark
@@ -88,7 +42,7 @@ mark,
 .blockquote-footer
     display block
     font-size 80%
-    color #868e96
+    color $secondary
     &::before
         content "\2014 \00A0"
 
@@ -98,7 +52,7 @@ mark,
 
 .img-thumbnail
     padding 0.25rem
-    background-color #fff
+    background-color $white
     border 1px solid #ddd
     border-radius 0.25rem
     transition all 0.2s ease-in-out
@@ -114,19 +68,19 @@ mark,
 
 .figure-caption
     font-size 90%
-    color #868e96
+    color $secondary
 
 code,
 kbd,
 pre,
 samp
-    font-family Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+    font-family $font-family-monospace
 
 code
     padding 0.2rem 0.4rem
     font-size 90%
     color #bd4147
-    background-color #f8f9fa
+    background-color $light
     border-radius 0.25rem
 
 a
@@ -138,13 +92,13 @@ a
 kbd
     padding 0.2rem 0.4rem
     font-size 90%
-    color #fff
+    color $white
     background-color #212529
     border-radius 0.2rem
     kbd
         padding 0
         font-size 100%
-        font-weight bold
+        font-weight $font-weight-bold
 
 pre
     display block

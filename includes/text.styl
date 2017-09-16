@@ -18,7 +18,7 @@
 .text-center
     text-align center !important
 
-@media (min-width: 576px)
+@media (min-width: $grid-sm)
     .text-sm-left
         text-align left !important
     .text-sm-right
@@ -26,7 +26,7 @@
     .text-sm-center
         text-align center !important
 
-@media (min-width: 768px)
+@media (min-width: $grid-md)
     .text-md-left
         text-align left !important
     .text-md-right
@@ -34,7 +34,7 @@
     .text-md-center
         text-align center !important
 
-@media (min-width: 992px)
+@media (min-width: $grid-lg)
     .text-lg-left
         text-align left !important
     .text-lg-right
@@ -42,7 +42,7 @@
     .text-lg-center
         text-align center !important
 
-@media (min-width: 1200px)
+@media (min-width: $grid-xl)
     .text-xl-left
         text-align left !important
     .text-xl-right
@@ -60,67 +60,67 @@
     text-transform capitalize !important
 
 .font-weight-normal
-    font-weight normal
+    font-weight $font-weight-normal
 
 .font-weight-bold
-    font-weight bold
+    font-weight $font-weight-bold
 
 .font-italic
     font-style italic
 
 .text-white
-    color #fff !important
+    color $white !important
 
 .text-primary
-    color #007bff !important
+    color $primary !important
 
 a.text-primary:focus, a.text-primary:hover
-    color #0062cc !important
+    color $primaryHov !important
 
 .text-secondary
-    color #868e96 !important
+    color $secondary !important
 
 a.text-secondary:focus, a.text-secondary:hover
-    color #6c757d !important
+    color $secondaryHov !important
 
 .text-success
-    color #28a745 !important
+    color $success !important
 
 a.text-success:focus, a.text-success:hover
-    color #1e7e34 !important
+    color $successHov !important
 
 .text-info
-    color #17a2b8 !important
+    color $info !important
 
 a.text-info:focus, a.text-info:hover
-    color #117a8b !important
+    color $infoHov !important
 
 .text-warning
-    color #ffc107 !important
+    color $warning !important
 
 a.text-warning:focus, a.text-warning:hover
-    color #d39e00 !important
+    color $warningHov !important
 
 .text-danger
-    color #dc3545 !important
+    color $danger !important
 
 a.text-danger:focus, a.text-danger:hover
-    color #bd2130 !important
+    color $dangerHov !important
 
 .text-light
-    color #f8f9fa !important
+    color $light !important
 
 a.text-light:focus, a.text-light:hover
-    color #dae0e5 !important
+    color $lightHov !important
 
 .text-dark
-    color #343a40 !important
+    color $dark !important
 
 a.text-dark:focus, a.text-dark:hover
-    color #1d2124 !important
+    color $darkHov !important
 
 .text-muted
-    color #868e96 !important
+    color $secondary !important
 
 .text-hide
     font 0/0 a

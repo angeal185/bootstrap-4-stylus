@@ -1,0 +1,21 @@
+.btn-dark
+    color $white
+    background-color $dark
+    border-color $dark
+    &:hover
+        color $white
+        background-color $darkBtnHov
+        border-color $darkHov
+
+.btn-dark:focus, .btn-dark.focus
+    box-shadow 0 0 0 3px rgba(52, 58, 64, 0.5)
+
+.btn-dark.disabled, .btn-dark:disabled
+    background-color $dark
+    border-color $dark
+
+.btn-dark:active, .btn-dark.active,
+.show > .btn-dark.dropdown-toggle
+    background-color $darkBtnHov
+    background-image none
+    border-color $darkHov

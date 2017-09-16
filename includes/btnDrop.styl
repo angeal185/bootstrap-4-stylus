@@ -40,7 +40,7 @@
     color #212529
     text-align left
     list-style none
-    background-color #fff
+    background-color $white
     background-clip padding-box
     border 1px solid rgba(0, 0, 0, 0.15)
     border-radius 0.25rem
@@ -58,7 +58,7 @@
     width 100%
     padding 0.25rem 1.5rem
     clear both
-    font-weight normal
+    font-weight $font-weight-normal
     color #212529
     text-align inherit
     white-space nowrap
@@ -68,15 +68,15 @@
 .dropdown-item:focus, .dropdown-item:hover
     color #16181b
     text-decoration none
-    background-color #f8f9fa
+    background-color $light
 
 .dropdown-item.active, .dropdown-item:active
-    color #fff
+    color $white
     text-decoration none
-    background-color #007bff
+    background-color $primary
 
 .dropdown-item.disabled, .dropdown-item:disabled
-    color #868e96
+    color $secondary
     background-color transparent
 
 .dropdown-header
@@ -84,5 +84,5 @@
     padding 0.5rem 1.5rem
     margin-bottom 0
     font-size 0.875rem
-    color #868e96
+    color $secondary
     white-space nowrap
