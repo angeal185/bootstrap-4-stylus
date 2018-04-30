@@ -72,7 +72,7 @@ for changes and compile to the `./dist` folder when a change is detected.
     "compile":{
       "enable":true,
       "command":"stylus bootstrap.styl -o ./dist"
-        }
+    },
     "toWatch":[
       "./bootstrap.styl",
       "./index.styl",
@@ -114,12 +114,14 @@ b4s.compressSourceMaps('./dist')
 
 ```
 * The default module options can be configured in `/lib/config/index.json`
-```js
+
+```json
 {
   "required":{
     "compile":{
       "command":"stylus node_modules/bootstrap-4-stylus/bootstrap.styl -o "
     }
+  }
 }
 ```
 
