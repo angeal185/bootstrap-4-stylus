@@ -5,7 +5,7 @@
     "ben eaves"
   ],
   "description": "stylus port of bootstrap.css v4",
-  "main": "index.js",
+  "main": "lib/index.js",
   "keywords": [
     "stylus",
     "bootstrap",
