@@ -43,9 +43,7 @@ will by default compile:
 
 ````
 ./dist/bootstrap.css
-./dist/bootstrap.css.map
 ./dist/bootstrap.min.css
-./dist/bootstrap.min.css.map
 ````
 
 #### live watch
@@ -65,6 +63,7 @@ for changes and compile to the `./dist` folder when a change is detected.
 
 
 * The default watch and compile options can be configured in `/lib/config/index.json`
+
 
 ```json
 {
