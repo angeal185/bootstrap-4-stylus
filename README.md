@@ -3,6 +3,12 @@ stylus port of bootstrap.css v4.0.0-beta
 
 ### Installation
 
+Ensure stylus is installed globally
+
+```sh
+$ npm install stylus -g
+```
+
 bower:
 ```sh
 $ bower install bootstrap-4-stylus --save-dev
