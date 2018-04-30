@@ -1,5 +1,5 @@
 # bootstrap-4-stylus
-stylus port of bootstrap.css v4.0.0-beta
+stylus port of bootstrap.css v4
 
 ### Installation
 
@@ -147,8 +147,6 @@ $ stylus bootstrap.styl -c -m -o ./dist/bootstrap.min.css
 
 ### windows users
 Navigate to: the `./cmd` folder and simply double click the `.cmd` file to compile to the `./dist` folder
-
-
 
 
 done.
