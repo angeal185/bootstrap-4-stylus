@@ -9,11 +9,11 @@
       "command":"stylus bootstrap.styl -c -o ./dist/bootstrap.min.css"
     },
     "compileSourceMaps":{
-      "enable":true,
+      "enable":false,
       "command":"stylus bootstrap.styl -m -o ./dist"
     },
     "compressSourceMaps":{
-      "enable":true,
+      "enable":false,
       "command":"stylus bootstrap.styl -c -m -o ./dist/bootstrap.min.css"
     },
     "toWatch":[
@@ -38,8 +38,8 @@
     "toWatch":{
       "compile":true,
       "compress":true,
-      "compileSourceMaps":true,
-      "compressSourceMaps":true
+      "compileSourceMaps":false,
+      "compressSourceMaps":false
     }
   }
 }
