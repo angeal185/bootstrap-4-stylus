@@ -34,12 +34,12 @@
     },
     "compressSourceMaps":{
       "command":"stylus node_modules/bootstrap-4-stylus/bootstrap.styl -c -m -o "
+    },
+    "toWatch":{
+      "compile":true,
+      "compress":true,
+      "compileSourceMaps":true,
+      "compressSourceMaps":true
     }
-  },
-  "toWatch":{
-    "compile":true,
-    "compress":true,
-    "compileSourceMaps":true,
-    "compressSourceMaps":true
   }
 }
