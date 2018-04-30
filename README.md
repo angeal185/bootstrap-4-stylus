@@ -40,25 +40,43 @@ will by default compile:
 ./dist/bootstrap.min.css.map
 ````
 
-This can be configured in:
+
+#### live watch
+
+```sh
+$ node watch.js
+```
+
+will by default start watching
+
+````
+"./bootstrap.styl",
+"./index.styl",
+"./includes"
+````
+for changes and compile to the `./dist` folder when a change is detected.
+
+
+* The default watch and compile options can be configured in:
 
 ````
 /lib/config/index.json
 ````
 
 ### default stylus command
+open a console and type:
 ```sh
 // compile bootstrap.css to ./dist folder
-stylus bootstrap.styl -o ./dist
+$ stylus bootstrap.styl -o ./dist
 
 // compile and compress bootstrap.min.css to ./dist folder
-stylus bootstrap.styl -c -o ./dist/bootstrap.min.css
+$ stylus bootstrap.styl -c -o ./dist/bootstrap.min.css
 
 // compile bootstrap.css to ./dist folder with sourceMap
-stylus bootstrap.styl -m -o ./dist
+$ stylus bootstrap.styl -m -o ./dist
 
 // compile and compress bootstrap.min.css to ./dist folder with sourceMap
-stylus bootstrap.styl -c -m -o ./dist/bootstrap.min.css
+$ stylus bootstrap.styl -c -m -o ./dist/bootstrap.min.css
 
 ```
 
