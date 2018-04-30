@@ -33,6 +33,8 @@ comment out or remove unwanted includes in the `bootstrap.styl` file then compil
 
 ### nodejs
 
+#### compile
+
 ```sh
 $ node index.js
 ```
@@ -45,7 +47,6 @@ will by default compile:
 ./dist/bootstrap.min.css
 ./dist/bootstrap.min.css.map
 ````
-
 
 #### live watch
 
@@ -63,11 +64,23 @@ will by default start watching
 for changes and compile to the `./dist` folder when a change is detected.
 
 
-* The default watch and compile options can be configured in:
+* The default watch and compile options can be configured in `/lib/config/index.json`
 
-````
-/lib/config/index.json
-````
+```json
+{
+  "main":{
+    "compile":{
+      "enable":true,
+      "command":"stylus bootstrap.styl -o ./dist"
+        }
+    "toWatch":[
+      "./bootstrap.styl",
+      "./index.styl",
+      "./includes"
+    ]
+  }
+}
+```
 
 ### require it as a module
 
@@ -100,11 +113,18 @@ b4s.compileSourceMaps('./dist')
 b4s.compressSourceMaps('./dist')
 
 ```
-* The default module options can be configured in:
+* The default module options can be configured in `/lib/config/index.json`
+```json
+{
+  "required":{
+    "compile":{
+      "command":"stylus node_modules/bootstrap-4-stylus/bootstrap.styl -o "
+    }
+}
+```
 
-````
-/lib/config/index.json
-````
+* An example can be found in `./example/index.js`
+
 
 ### default stylus command
 open a console and type:
