@@ -86,7 +86,7 @@ for changes and compile to the `./dist` folder when a change is detected.
 
 bootstrap-4-stylus can be used in the following way when required as a module
 
-```sh
+```js
 const b4s = require('bootstrap-4-stylus');
 
 // list of files/folders to watch
@@ -114,7 +114,7 @@ b4s.compressSourceMaps('./dist')
 
 ```
 * The default module options can be configured in `/lib/config/index.json`
-```json
+```js
 {
   "required":{
     "compile":{
@@ -128,7 +128,7 @@ b4s.compressSourceMaps('./dist')
 
 ### default stylus command
 open a console and type:
-```sh
+```js
 // compile bootstrap.css to ./dist folder
 $ stylus bootstrap.styl -o ./dist
 
