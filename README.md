@@ -25,6 +25,7 @@ Build variables can be edited via the `index.styl` file.
 comment out or remove unwanted includes in the `bootstrap.styl` file then compile in one of the following ways..
 
 
+### nodejs
 
 ```sh
 $ node index.js
@@ -43,14 +44,26 @@ This can be configured in:
 
 ````
 /lib/config/index.json
-
 ````
 
-
+### default stylus command
 ```sh
-stylus bootstrap.styl
+// compile bootstrap.css to ./dist folder
+stylus bootstrap.styl -o ./dist
+
+// compile and compress bootstrap.min.css to ./dist folder
+stylus bootstrap.styl -c -o ./dist/bootstrap.min.css
+
+// compile bootstrap.css to ./dist folder with sourceMap
+stylus bootstrap.styl -m -o ./dist
+
+// compile and compress bootstrap.min.css to ./dist folder with sourceMap
+stylus bootstrap.styl -c -m -o ./dist/bootstrap.min.css
+
 ```
 
+### windows users
+Navigate to: the `./cmd` folder and simply double click the `.cmd` file to compile to the `./dist` folder
 
 
 
