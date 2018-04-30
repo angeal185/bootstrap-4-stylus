@@ -1,0 +1,39 @@
+{
+  "main":{
+    "compile":{
+      "enable":true,
+      "command":"stylus bootstrap.styl -o ./dist"
+    },
+    "compress":{
+      "enable":true,
+      "command":"stylus bootstrap.styl -c -o ./dist/bootstrap.min.css"
+    },
+    "compileSourceMaps":{
+      "enable":true,
+      "command":"stylus bootstrap.styl -m -o ./dist"
+    },
+    "compressSourceMaps":{
+      "enable":true,
+      "command":"stylus bootstrap.styl -c -m -o ./dist/bootstrap.min.css"
+    },
+    "toWatch":[
+      "./bootstrap.styl",
+      "./index.styl",
+      "./includes"
+    ]
+  },
+  "required":{
+    "compile":{
+      "command":"stylus node_modules/bootstrap-4-stylus/bootstrap.styl -o "
+    },
+    "compress":{
+      "command":"stylus node_modules/bootstrap-4-stylus/bootstrap.styl -c -o "
+    },
+    "compileSourceMaps":{
+      "command":"stylus node_modules/bootstrap-4-stylus/bootstrap.styl -m -o "
+    },
+    "compressSourceMaps":{
+      "command":"stylus node_modules/bootstrap-4-stylus/bootstrap.styl -c -m -o "
+    }
+  }
+}
