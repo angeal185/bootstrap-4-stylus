@@ -18,7 +18,7 @@
     },
     "toWatch":[
       "./bootstrap.styl",
-      "./index.styl",
+      "./variables.styl",
       "./includes"
     ]
   },

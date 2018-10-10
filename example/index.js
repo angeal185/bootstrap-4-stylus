@@ -4,7 +4,7 @@ const b4s = require('bootstrap-4-stylus');
 // list of files/folders to watch
 var toWatch = [
   "./node_modules/bootstrap-4-stylus/bootstrap.styl",
-  "./node_modules/bootstrap-4-stylus/index.styl",
+  "./node_modules/bootstrap-4-stylus/variables.styl",
   "./node_modules/bootstrap-4-stylus/includes"
 ]
 

@@ -26,7 +26,7 @@ No learning curve and no repeats. build it how you want it or just use it as an 
 ### Instructions
 bootstrap.css has been converted, broken down into smaller .styl includes and the include files are named accordingly.
 
-Build variables can be edited via the `index.styl` file.  
+Build variables can be edited via the `variables.styl` file.  
 
 comment out or remove unwanted includes in the `bootstrap.styl` file then compile in one of the following ways..
 
@@ -56,7 +56,7 @@ will by default start watching
 
 ````
 "./bootstrap.styl",
-"./index.styl",
+"./variables.styl",
 "./includes"
 ````
 for changes and compile to the `./dist` folder when a change is detected.
@@ -74,7 +74,7 @@ for changes and compile to the `./dist` folder when a change is detected.
     },
     "toWatch":[
       "./bootstrap.styl",
-      "./index.styl",
+      "./variables.styl",
       "./includes"
     ]
   }
@@ -91,7 +91,7 @@ const b4s = require('bootstrap-4-stylus');
 // list of files/folders to watch
 var toWatch = [
   "./node_modules/bootstrap-4-stylus/bootstrap.styl",
-  "./node_modules/bootstrap-4-stylus/index.styl",
+  "./node_modules/bootstrap-4-stylus/variables.styl",
   "./node_modules/bootstrap-4-stylus/includes"
 ]
 
