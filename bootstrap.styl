@@ -1,74 +1,155 @@
-@import "index"
 
-@import "includes/mediaPrint"
-@import "includes/main"
-@import "includes/fonts"
-@import "includes/display"
-@import "includes/taxonomy"
-@import "includes/container"
-@import "includes/container-fluid"
-@import "includes/row"
-@import "includes/noGutters"
-@import "includes/col"
-@import "includes/offset"
-@import "includes/order"
-@import "includes/table"
-@import "includes/formControl"
+// colors
+$white ?= #fff
+$gray-100 ?= #f8f9fa
+$gray-200 ?= #e9ecef
+$gray-300 ?= #dee2e6
+$gray-400 ?= #ced4da
+$gray-500 ?= #adb5bd
+$gray-600 ?= #868e96
+$gray-700 ?= #495057
+$gray-800 ?= #343a40
+$gray-900 ?= #212529
+$black ?= #000
 
-@import "includes/btn"
-@import "includes/btnPrimary"
-@import "includes/btnSecondary"
-@import "includes/btnSuccess"
-@import "includes/btnInfo"
-@import "includes/btnWarning"
-@import "includes/btnDanger"
-@import "includes/btnLight"
-@import "includes/btnDark"
-@import "includes/btnOutlinePrimary"
-@import "includes/btnOutlineSecondary"
-@import "includes/btnOutlineSuccess"
-@import "includes/btnOutlineInfo"
-@import "includes/btnOutlineWarning"
-@import "includes/btnOutlineDanger"
-@import "includes/btnOutlineLight"
-@import "includes/btnOutlineDark"
-@import "includes/btnLink"
-@import "includes/btnDrop"
-@import "includes/btnGroup"
-@import "includes/btnMsc"
+$primary ?= #007bff
+$primaryHov ?= #0062cc
+$primaryBtnHov ?= #0069d9
+$secondary ?= $gray-600
+$secondaryHov ?= #6c757d
+$secondaryBtnHov ?= #727b84
+$success ?= #28a745
+$successHov ?= #1e7e34
+$successBtnHov ?= #218838
+$info ?= #17a2b8
+$infoHov ?= #117a8b
+$infoBtnHov ?= #138496
+$warning ?= #ffc107
+$warningHov ?= #d39e00
+$warningBtnHov ?= #e0a800
+$danger ?= #dc3545
+$dangerHov ?= #bd2130
+$dangerBtnHov ?= #c82333
+$light ?= $gray-100
+$lightHov ?= #dae0e5
+$lightBtnHov ?= #e2e6ea
+$dark ?= $gray-800
+$darkHov ?= #1d2124
+$darkBtnHov ?= #23272b
 
-@import "includes/input"
-@import "includes/custom"
-@import "includes/nav"
-@import "includes/card"
-@import "includes/breadcrumb"
-@import "includes/pagination"
-@import "includes/badge"
-@import "includes/jumbotron"
-@import "includes/alert"
-@import "includes/progress"
-@import "includes/media"
-@import "includes/listGroup"
-@import "includes/close"
-@import "includes/modal"
-@import "includes/tooltip"
-@import "includes/popover"
-@import "includes/carousel"
-@import "includes/align"
-@import "includes/bg"
-@import "includes/border"
-@import "includes/rounded"
-@import "includes/d"
-@import "includes/embed"
-@import "includes/flex"
-@import "includes/justify"
-@import "includes/alignItem"
-@import "includes/alignContent"
-@import "includes/alignSelf"
-@import "includes/float"
-@import "includes/position"
-@import "includes/helpers/widthHeightHelper"
-@import "includes/helpers/marginHelper"
-@import "includes/helpers/paddingHelper"
-@import "includes/text"
-@import "includes/visible"
+$bodyColor ?= $white
+$bodyBackground ?= $gray-900
+
+//col includes
+$col-include ?= true
+$col-sm-include ?= true
+$col-md-include ?= true
+$col-lg-include ?= true
+$col-xl-include ?= true
+
+//flex includes
+$flex-include ?= true
+$flex-sm-include ?= true
+$flex-md-include ?= true
+$flex-lg-include ?= true
+$flex-xl-include ?= true
+
+//grid breakpoints
+$grid-sm ?= 576px
+$grid-md ?= 768px
+$grid-lg ?= 992px
+$grid-xl ?= 1200px
+
+//container includes
+$container-sm-include ?= true
+$container-md-include ?= true
+$container-lg-include ?= true
+$container-xl-include ?= true
+
+//container-max-size
+$container-sm ?= 540px
+$container-md ?= 720px
+$container-lg ?= 960px
+$container-xl ?= 1140px
+
+
+$line-height-lg ?= 1.5
+$line-height-sm ?= 1.5
+
+$border-width ?= 1px
+$border-color ?= $gray-200
+
+$border-radius ?= .25rem
+$border-radius-lg ?= .3rem
+$border-radius-sm ?= .2rem
+
+//fonts
+$font-size-base ?= 1rem
+$font-size-lg ?= 1.25rem
+$font-size-sm ?= .875rem
+
+$font-weight-light ?= 300
+$font-weight-normal ?= normal
+$font-weight-bold ?= bold
+
+$font-family-base ?= -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+$font-family-monospace ?=  "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+
+
+$h1-font-size ?= 2.5rem
+$h2-font-size ?= 2rem
+$h3-font-size ?= 1.75rem
+$h4-font-size ?= 1.5rem
+$h5-font-size ?= 1.25rem
+$h6-font-size ?= $font-size-base
+
+
+$headings-margin-bottom  ?= .5rem
+$headings-font-family ?= inherit
+$headings-font-weight ?= 500
+$headings-line-height  ?= 1.1
+$headings-color ?= inherit
+
+//display
+$display1-size ?= 6rem
+$display2-size ?= 5.5rem
+$display3-size ?= 4.5rem
+$display4-size ?= 3.5rem
+
+$display1-weight ?= $font-weight-light
+$display2-weight ?= $font-weight-light
+$display3-weight ?= $font-weight-light
+$display4-weight ?= $font-weight-light
+
+$display-line-height ?= $headings-line-height
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$size-25 ?= 25%,
+$size-50 ?= 50%,
+$size-75 ?= 75%,
+$size-100 ?= 100%
+
+
+$small-font-size ?= 80%
+
+$lead-font-size ?= $h5-font-size
+$lead-font-weight ?= $font-weight-light
+
+$hr-border-color ?= rgba($black,.1)
+$hr-border-width ?= $border-width
+
+$blockquote-font-size ?= ($font-size-base * 1.5)
+
+$text-muted ?= $gray-600
+
+$null ?= 0
+
+//helper-sizes
+$helper-size-0 ?= $null
+$helper-size-1 ?= .25rem
+$helper-size-2 ?= .5rem
+$helper-size-3 ?= 1rem
+$helper-size-4 ?= 1.5rem
+$helper-size-5 ?= 3rem
+
+@import "includes"

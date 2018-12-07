@@ -1,45 +1,38 @@
 {
+  "baseInstall":"./node_modules/",
+  "cloneInstall":"./dev/",
+  "baseDir":"bootstrap-4-stylus/",
+  "baseFile":"bootstrap.styl",
+  "baseName":"bootstrap",
+  "baseDest": "./dist",
   "main":{
     "compile":{
       "enable":true,
-      "command":"stylus bootstrap.styl -o ./dist"
+      "command":"-o ./dist"
     },
     "compress":{
       "enable":true,
-      "command":"stylus bootstrap.styl -c -o ./dist/bootstrap.min.css"
+      "command":"-c -o ./dist/bootstrap.min.css"
     },
     "compileSourceMaps":{
       "enable":false,
-      "command":"stylus bootstrap.styl -m -o ./dist"
+      "command":"-m -o ./dist"
     },
     "compressSourceMaps":{
       "enable":false,
-      "command":"stylus bootstrap.styl -c -m -o ./dist/bootstrap.min.css"
-    },
+      "command":"-c -m -o ./dist/bootstrap.min.css"
+    }
+  },
+  "options":{
+    "compile":true,
+    "compress":true,
+    "compileSourceMaps":false,
+    "compressSourceMaps":false,
     "toWatch":[
       "./bootstrap.styl",
-      "./index.styl",
-      "./includes"
+      "./includes.styl",
+      "./includes",
+      "./includes/helpers"
     ]
-  },
-  "required":{
-    "compile":{
-      "command":"stylus node_modules/bootstrap-4-stylus/bootstrap.styl -o "
-    },
-    "compress":{
-      "command":"stylus node_modules/bootstrap-4-stylus/bootstrap.styl -c -o "
-    },
-    "compileSourceMaps":{
-      "command":"stylus node_modules/bootstrap-4-stylus/bootstrap.styl -m -o "
-    },
-    "compressSourceMaps":{
-      "command":"stylus node_modules/bootstrap-4-stylus/bootstrap.styl -c -m -o "
-    },
-    "toWatch":{
-      "compile":true,
-      "compress":true,
-      "compileSourceMaps":false,
-      "compressSourceMaps":false
-    }
   }
 }

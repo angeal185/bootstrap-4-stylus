@@ -5,18 +5,16 @@
     padding-left 15px
     width 100%
 
-@media (min-width: $grid-sm)
+container(arg1,arg2)
+  @media (min-width: arg1)
     .container
-        max-width $container-sm
+      max-width arg2
 
-@media (min-width: $grid-md)
-    .container
-        max-width $container-md
-
-@media (min-width: $grid-lg)
-    .container
-        max-width $container-lg
-
-@media (min-width: $grid-xl)
-    .container
-        max-width $container-xl
+if $container-sm-include
+  container($grid-sm,$container-sm)
+if $container-md-include
+  container($grid-md,$container-md)
+if $container-lg-include
+  container($grid-lg,$container-lg)
+if $container-xl-include
+  container($grid-xl,$container-xl)
