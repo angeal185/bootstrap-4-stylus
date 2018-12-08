@@ -34,5 +34,26 @@
       "./includes",
       "./includes/helpers"
     ]
+  },
+  "get":{
+    "js":{
+      "dest":"./dist/js/",
+      "bootstrap":{
+        "url":"cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.js",
+        "checksum":"82SVOjZ1qLdrq8VUmAisFapCSq1bpgavtXQaDGLPAAg="
+      },
+      "bootstrapMin":{
+        "url":"cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js",
+        "checksum":"VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ="
+      },
+      "bootstrapMap":{
+        "url":"cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.js.map",
+        "checksum":"Cpsa8Oi6eoDQryUUSSfraGBe1ZFb6OJf8DvOPVn8gy0="
+      },
+      "bootstrapMinMap":{
+        "url":"cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js.map",
+        "checksum":"qBtQFOVQmgBEBE8hv/Ho7uPPtNB06Dh+gnh4spOXtGs="
+      }
+    }
   }
 }

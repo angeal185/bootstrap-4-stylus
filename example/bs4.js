@@ -10,7 +10,13 @@ var options = {
     "./bootstrap.styl",
     "./node_modules/bootstrap-4-stylus/includes",
     "./node_modules/bootstrap-4-stylus/includes/helpers"
-  ]
+  ],
+  js:{ // requires internet connection
+    "bootstrap": true, //get bootstrap.js
+    "bootstrapMin": false, //get bootstrap.min.js
+    "bootstrapMap": false, //get bootstrap.js.map
+    "bootstrapMinMap": false //get bootstrap.min.js.map
+  }
 }
 
 // start livewatch and compile to ./dist folder on change
@@ -31,6 +37,9 @@ b4s.compileSourceMaps()
 
 // compile bootstrap.min.css.map into ./dist folder
 b4s.compressSourceMaps()
+
+// download bootstrap js files into ./dist/js folder
+b4s.getJs(options.js)
 
 // build bootstrap4-stylus for use in cwd
 // ~ note: This will write over any existing files!
