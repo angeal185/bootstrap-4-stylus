@@ -216,11 +216,16 @@ exports.default = watch
 
 
 
-#### bower
-bower:
+#### bower/git
+
 ```sh
 $ bower install bootstrap-4-stylus --save-dev
 ```
+
+```sh
+$  git clone git://github.com/angeal185/bootstrap-4-stylus.git
+```
+
 
 your setup will be:
 
