@@ -1,4 +1,5 @@
-
+//path
+$basepath ?= './'
 // colors
 $white ?= #fff
 $gray-100 ?= #f8f9fa
@@ -152,4 +153,47 @@ $helper-size-3 ?= 1rem
 $helper-size-4 ?= 1.5rem
 $helper-size-5 ?= 3rem
 
-@import "includes"
+//text-transforms
+$textTransform ?= lowercase uppercase capitalize
+$text-transform-include ?= true
+
+//directions
+$directions ?= left right center
+$floatDirections ?= left right none
+
+//text-direction-sub-includes
+$text-directions-base-include ?= true
+$text-directions-sm-include ?= true
+$text-directions-md-include ?= true
+$text-directions-lg-include ?= true
+$text-directions-xl-include ?= true
+
+//text-type-sub-includes
+$text-primary-include ?= true
+$text-secondary-include ?= true
+$text-success-include ?= true
+$text-info-include ?= true
+$text-warning-include ?= true
+$text-danger-include ?= true
+$text-light-include ?= true
+$text-dark-include ?= true
+
+//float-sub-includes
+$float-base-include ?= true
+$float-sm-include ?= true
+$float-md-include ?= true
+$float-lg-include ?= true
+$float-xl-include ?= true
+
+
+//text-sub-includes
+
+@import pathjoin($basepath, 'includes')
+
+for key,val in includes
+  if val is true
+    @import  pathjoin($basepath, 'includes', key)
+
+for key,val in helpers
+  if val is true
+    @import  pathjoin($basepath ,'includes/helpers', key)

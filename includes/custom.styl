@@ -158,3 +158,40 @@
         border-radius 0 0.25rem 0.25rem 0
     &:lang(en)::before
         content "Browse"
+
+
+.custom-switch
+    .custom-control-label
+        &::before
+            left -2.25rem
+            width 1.75rem
+            pointer-events all
+            border-radius 0.5rem
+        &::after
+            top calc(0.25rem + 2px)
+            left calc(-2.25rem + 2px)
+            width calc(1rem - 4px)
+            height calc(1rem - 4px)
+            background-color #adb5bd
+            border-radius 0.5rem
+            transition background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out
+            transition transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+            transition transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out
+    .custom-control-input
+        &:checked
+            & ~ .custom-control-label
+                &::after
+                    background-color #fff
+                    -webkit-transform translateX(0.75rem)
+                    transform translateX(0.75rem)
+        &:disabled
+            &:checked
+                & ~ .custom-control-label
+                    &::before
+                        background-color rgba(0, 123, 255, 0.5)
+
+@media screen and (prefers-reduced-motion: reduce)
+    .custom-switch
+        .custom-control-label
+            &::after
+                transition none

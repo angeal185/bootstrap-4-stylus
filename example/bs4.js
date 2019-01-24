@@ -9,6 +9,7 @@ var options = {
   toWatch: [
     "./bootstrap.styl",
     "./node_modules/bootstrap-4-stylus/includes",
+    "./node_modules/bootstrap-4-stylus/includes.styl",
     "./node_modules/bootstrap-4-stylus/includes/helpers"
   ],
   js:{ // requires internet connection
@@ -19,28 +20,32 @@ var options = {
   }
 }
 
-// start livewatch and compile to ./dist folder on change
-b4s.watch(options);
 
-// default task. will compile bootstrap.css && bootstrap.min.css into ./dist folder
-// this can be configured in /lib/config/index.json under "main"
-b4s.init()
+/* start livewatch and compile to ./dist folder on change */
+// b4s.watch(options);
 
-// compile bootstrap.css into ./dist folder
-b4s.compile()
+/* default task. will compile bootstrap.css && bootstrap.min.css into ./dist folder */
+// b4s.init()
 
-// compile bootstrap.min.css into ./dist folder
-b4s.compress()
+/* compile bootstrap.css into ./dist folder */
+// b4s.compile()
 
-// compile bootstrap.css.map into ./dist folder
-b4s.compileSourceMaps()
+/* compile bootstrap.min.css into ./dist folder */
+// b4s.compress()
 
-// compile bootstrap.min.css.map into ./dist folder
-b4s.compressSourceMaps()
+/* compile bootstrap.css.map into ./dist folder */
+// b4s.compileSourceMaps()
 
-// download bootstrap js files into ./dist/js folder
-b4s.getJs(options.js)
+/* compile bootstrap.min.css.map into ./dist folder */
+// b4s.compressSourceMaps()
 
-// build bootstrap4-stylus for use in cwd
-// ~ note: This will write over any existing files!
-// b4s.build(true);
+/* download bootstrap js files into ./dist/js folder */
+// b4s.getJs(options.js)
+
+/* check for updates */
+// b4s.versionCheck()
+
+/* build bootstrap4-stylus for use in cwd
+true = clone a copy into your cwd and automatically update rout strings.
+ ~ note: This will write over any existing files! */
+ // b4s.build(true);

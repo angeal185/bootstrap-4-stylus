@@ -1,3 +1,4 @@
+
 .text-justify
     text-align justify !important
 
@@ -9,55 +10,40 @@
     text-overflow ellipsis
     white-space nowrap
 
-.text-left
-    text-align left !important
+if $text-directions-base-include
+  for i in $directions
+    .text-{i}
+      text-align i !important
 
-.text-right
-    text-align right !important
+if $text-directions-sm-include
+  @media (min-width: $grid-sm)
+    for i in $directions
+      .text-sm-{i}
+        text-align i !important
 
-.text-center
-    text-align center !important
+if $text-directions-md-include
+  @media (min-width: $grid-md)
+    for i in $directions
+      .text-md-{i}
+        text-align i !important
 
-@media (min-width: $grid-sm)
-    .text-sm-left
-        text-align left !important
-    .text-sm-right
-        text-align right !important
-    .text-sm-center
-        text-align center !important
+if $text-directions-lg-include
+  @media (min-width: $grid-lg)
+    for i in $directions
+      .text-lg-{i}
+        text-align i !important
 
-@media (min-width: $grid-md)
-    .text-md-left
-        text-align left !important
-    .text-md-right
-        text-align right !important
-    .text-md-center
-        text-align center !important
+if $text-directions-xl-include
+  @media (min-width: $grid-xl)
+    for i in $directions
+      .text-xl-{i}
+          text-align i !important
 
-@media (min-width: $grid-lg)
-    .text-lg-left
-        text-align left !important
-    .text-lg-right
-        text-align right !important
-    .text-lg-center
-        text-align center !important
+if $text-transform-include
+  for i in $textTransform
+    .text-{i}
+        text-transform i !important
 
-@media (min-width: $grid-xl)
-    .text-xl-left
-        text-align left !important
-    .text-xl-right
-        text-align right !important
-    .text-xl-center
-        text-align center !important
-
-.text-lowercase
-    text-transform lowercase !important
-
-.text-uppercase
-    text-transform uppercase !important
-
-.text-capitalize
-    text-transform capitalize !important
 
 .font-weight-normal
     font-weight $font-weight-normal
@@ -71,60 +57,68 @@
 .text-white
     color $white !important
 
-.text-primary
-    color $primary !important
+if $text-primary-include
+  .text-primary
+      color $primary !important
 
-a.text-primary:focus, a.text-primary:hover
-    color $primaryHov !important
+  a.text-primary:focus, a.text-primary:hover
+      color $primaryHov !important
 
-.text-secondary
-    color $secondary !important
+if $text-secondary-include
+  .text-secondary
+      color $secondary !important
 
-a.text-secondary:focus, a.text-secondary:hover
-    color $secondaryHov !important
+  a.text-secondary:focus, a.text-secondary:hover
+      color $secondaryHov !important
 
-.text-success
-    color $success !important
+if $text-success-include
+  .text-success
+      color $success !important
 
-a.text-success:focus, a.text-success:hover
-    color $successHov !important
+  a.text-success:focus, a.text-success:hover
+      color $successHov !important
 
-.text-info
-    color $info !important
+if $text-info-include
+  .text-info
+      color $info !important
 
-a.text-info:focus, a.text-info:hover
-    color $infoHov !important
+  a.text-info:focus, a.text-info:hover
+      color $infoHov !important
 
-.text-warning
-    color $warning !important
+if $text-warning-include
+  .text-warning
+      color $warning !important
 
-a.text-warning:focus, a.text-warning:hover
-    color $warningHov !important
+  a.text-warning:focus, a.text-warning:hover
+      color $warningHov !important
 
-.text-danger
-    color $danger !important
+if $text-danger-include
+  .text-danger
+      color $danger !important
 
-a.text-danger:focus, a.text-danger:hover
-    color $dangerHov !important
+  a.text-danger:focus, a.text-danger:hover
+      color $dangerHov !important
 
-.text-light
-    color $light !important
+if $text-light-include
+  .text-light
+      color $light !important
 
-a.text-light:focus, a.text-light:hover
-    color $lightHov !important
+  a.text-light:focus, a.text-light:hover
+      color $lightHov !important
 
-.text-dark
-    color $dark !important
+if $text-dark-include
+  .text-dark
+      color $dark !important
 
-a.text-dark:focus, a.text-dark:hover
-    color $darkHov !important
+  a.text-dark:focus, a.text-dark:hover
+      color $darkHov !important
 
-.text-muted
-    color $text-muted !important
+  .text-muted
+      color $text-muted !important
 
-.text-hide
-    font 0/0 a
-    color transparent
-    text-shadow none
-    background-color transparent
-    border 0
+  .text-hide
+      font 0/0 a
+      color transparent
+      text-shadow none
+      background-color transparent
+      border 0

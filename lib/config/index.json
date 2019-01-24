@@ -5,6 +5,7 @@
   "baseFile":"bootstrap.styl",
   "baseName":"bootstrap",
   "baseDest": "./dist",
+  "version": "1.0.4",
   "main":{
     "compile":{
       "enable":true,
