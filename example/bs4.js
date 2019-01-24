@@ -22,7 +22,7 @@ var options = {
 
 
 /* start livewatch and compile to ./dist folder on change */
-// b4s.watch(options);
+ b4s.watch(options);
 
 /* default task. will compile bootstrap.css && bootstrap.min.css into ./dist folder */
 // b4s.init()
@@ -48,4 +48,4 @@ var options = {
 /* build bootstrap4-stylus for use in cwd
 true = clone a copy into your cwd and automatically update rout strings.
  ~ note: This will write over any existing files! */
- // b4s.build(true);
+ //b4s.build(true);

@@ -1,4 +1,4 @@
 const lib = require('./lib'),
 config = require('./lib/config');
 
-lib.watchMain(config.options.toWatch);
+lib.watch(config.options.toWatch);
