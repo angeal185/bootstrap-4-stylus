@@ -16,7 +16,11 @@ options = {
     "bootstrapMin": true,
     "bootstrapMap": true,
     "bootstrapMinMap": true
-  }
+  },
+  backup: [ // files/dirs for backup
+    "./bootstrap.styl",
+    "./dev/bootstrap-4-stylus"
+  ]
 };
 
 
@@ -59,8 +63,18 @@ function bs4Build(done) {
   done()
 }
 
-function watch(done) {
-  return b4s.watch(options)
+function bs4Watch(done) {
+  b4s.watch(options)
+  done()
+}
+
+function bs4BackupLin(done) {
+  b4s.backupLin(options.backup)
+  done()
+}
+
+function bs4BackupLin(done) {
+  b4s.backupWin(options.backup)
   done()
 }
 
@@ -73,5 +87,7 @@ exports.bs4CompressSourceMaps = bs4CompressSourceMaps;
 exports.bs4GetJs = bs4GetJs;
 exports.bs4VersionCheck = bs4VersionCheck;
 exports.bs4Build = bs4Build;
-exports.watch = watch;
-exports.default = watch
+exports.bs4Watch = bs4Watch;
+exports.bs4BackupLin = bs4BackupLin;
+exports.bs4backupWin = bs4BackupWin;
+exports.default = bs4Watch

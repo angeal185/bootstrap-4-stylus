@@ -92,7 +92,11 @@ var options = {
     "bootstrapMin": false, //get bootstrap.min.js and verify hash
     "bootstrapMap": false, //get bootstrap.js.map and verify hash
     "bootstrapMinMap": false //get bootstrap.min.js.map and verify hash
-  }
+  },
+  backup: [ // files/dirs for backup
+    "./bootstrap.styl",
+    "./dev/bootstrap-4-stylus"
+  ]
 }
 
 
@@ -124,6 +128,12 @@ b4s.build(true);
 
 // check for updates
 b4s.versionCheck()
+
+// backup for windows users ~ .zip */
+b4s.backupWin(options.backup);
+
+// backup for linux/ windows with tar installed ~ .tar.gz
+b4s.backupLin(options.backup);
 
 ```
 
@@ -195,8 +205,18 @@ function bs4Build(done) {
   done()
 }
 
-function watch(done) {
-  return b4s.watch(options)
+function bs4Watch(done) {
+  b4s.watch(options)
+  done()
+}
+
+function bs4BackupLin(done) {
+  b4s.backupLin(options.backup)
+  done()
+}
+
+function bs4BackupLin(done) {
+  b4s.backupWin(options.backup)
   done()
 }
 
@@ -209,35 +229,35 @@ exports.bs4CompressSourceMaps = bs4CompressSourceMaps;
 exports.bs4GetJs = bs4GetJs;
 exports.bs4VersionCheck = bs4VersionCheck;
 exports.bs4Build = bs4Build;
-exports.watch = watch;
-exports.default = watch
+exports.bs4Watch = bs4Watch;
+exports.bs4BackupLin = bs4BackupLin;
+exports.bs4backupWin = bs4BackupWin;
+exports.default = bs4Watch
 ```
 * An example gulpfile.js can be found at `/examples/gulpfile.js`
 
 
 
-#### bower/git
-
+#### bower
+bower:
 ```sh
 $ bower install bootstrap-4-stylus --save-dev
 ```
-
-```sh
-$  git clone git://github.com/angeal185/bootstrap-4-stylus.git
-```
-
 
 your setup will be:
 
 ```bash
 ├─bootstrap.styl
-├─bincludes.styl
+├─includes.styl
 ├─index.js
-├─watch.js
+├─app.bat
 ├───cmd
 ├───dist
+├───example
+    └───main.js*
 ├───includes
     └───helpers
+
 
 
 ```
@@ -248,6 +268,7 @@ $ node index.js
 
 will by default compile:
 
+
 ```json
 [
     "./dist/bootstrap.css",
@@ -255,26 +276,15 @@ will by default compile:
 ]
 ````
 
-#### live watch
+The file `./example.main.js` has a complete list of functions available to you. simply move this file into the base dir `./` and you will have the same functionallity as the npm users.
+
 
 ```sh
-$ node watch.js
+$ node main.js
 ```
 
-will by default start watching
-
-````json
-[
-  "./bootstrap.styl",
-  "./includes.styl",
-  "./includes",
-  "./includes/helpers"
-]
-````
-for changes and compile to the `./dist` folder when a change is detected.
-
-* as with the npm users, you also have access to all the other functions and gulp usage. examples can be found in the `./examples` folder.
-* The default watch and compile options can be configured in `/lib/config/index.json`
+* as with the npm users, you also have access to all the other functions and gulp usage.
+* The default app options can be configured in `/lib/config/index.json`
 
 
 ```json
@@ -330,7 +340,7 @@ $ stylus bootstrap.styl -c -m -o ./dist/bootstrap.min.css
 ```
 
 ### windows users
-Navigate to: the `./cmd` folder and simply double click the `.cmd` file to compile to the `./dist` folder
+double click the `./app.bat` file for an interactive task runner command line app.
 
 
 done.
