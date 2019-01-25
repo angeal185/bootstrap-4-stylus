@@ -1,119 +1,38 @@
-.flex-row
-    -ms-flex-direction row !important
-    flex-direction row !important
+flex(arg1,arg2,arg3)
+  .flex{arg3}-{arg1}
+    -ms-flex-{arg2} arg1 !important
+    flex-{arg2} arg1 !important
 
-.flex-column
-    -ms-flex-direction column !important
-    flex-direction column !important
+if $flex-include
+  for i in row row-reverse column column-reverse
+    flex(i,direction, '')
+  for i in wrap nowrap wrap-reverse
+    flex(i,wrap, '')
 
-.flex-row-reverse
-    -ms-flex-direction row-reverse !important
-    flex-direction row-reverse !important
+if $flex-sm-include
+  @media (min-width: $grid-sm)
+    for i in row row-reverse column column-reverse
+      flex(i,direction,-sm)
+    for i in wrap nowrap wrap-reverse
+      flex(i,wrap,-sm)
 
-.flex-column-reverse
-    -ms-flex-direction column-reverse !important
-    flex-direction column-reverse !important
+if $flex-md-include
+  @media (min-width: $grid-md)
+    for i in row row-reverse column column-reverse
+      flex(i,direction,-md)
+    for i in wrap nowrap wrap-reverse
+      flex(i,wrap,-md)
 
-.flex-wrap
-    -ms-flex-wrap wrap !important
-    flex-wrap wrap !important
+if $flex-lg-include
+  @media (min-width: $grid-lg)
+    for i in row row-reverse column column-reverse
+      flex(i,direction,-lg)
+    for i in wrap nowrap wrap-reverse
+      flex(i,wrap,-lg)
 
-.flex-nowrap
-    -ms-flex-wrap nowrap !important
-    flex-wrap nowrap !important
-
-.flex-wrap-reverse
-    -ms-flex-wrap wrap-reverse !important
-    flex-wrap wrap-reverse !important
-	
-@media (min-width: $grid-sm)
-    .flex-sm-row
-        -ms-flex-direction row !important
-        flex-direction row !important
-    .flex-sm-column
-        -ms-flex-direction column !important
-        flex-direction column !important
-    .flex-sm-row-reverse
-        -ms-flex-direction row-reverse !important
-        flex-direction row-reverse !important
-    .flex-sm-column-reverse
-        -ms-flex-direction column-reverse !important
-        flex-direction column-reverse !important
-    .flex-sm-wrap
-        -ms-flex-wrap wrap !important
-        flex-wrap wrap !important
-    .flex-sm-nowrap
-        -ms-flex-wrap nowrap !important
-        flex-wrap nowrap !important
-    .flex-sm-wrap-reverse
-        -ms-flex-wrap wrap-reverse !important
-        flex-wrap wrap-reverse !important
-
-@media (min-width: $grid-md)
-    .flex-md-row
-        -ms-flex-direction row !important
-        flex-direction row !important
-    .flex-md-column
-        -ms-flex-direction column !important
-        flex-direction column !important
-    .flex-md-row-reverse
-        -ms-flex-direction row-reverse !important
-        flex-direction row-reverse !important
-    .flex-md-column-reverse
-        -ms-flex-direction column-reverse !important
-        flex-direction column-reverse !important
-    .flex-md-wrap
-        -ms-flex-wrap wrap !important
-        flex-wrap wrap !important
-    .flex-md-nowrap
-        -ms-flex-wrap nowrap !important
-        flex-wrap nowrap !important
-    .flex-md-wrap-reverse
-        -ms-flex-wrap wrap-reverse !important
-        flex-wrap wrap-reverse !important
-
-@media (min-width: $grid-lg)
-    .flex-lg-row
-        -ms-flex-direction row !important
-        flex-direction row !important
-    .flex-lg-column
-        -ms-flex-direction column !important
-        flex-direction column !important
-    .flex-lg-row-reverse
-        -ms-flex-direction row-reverse !important
-        flex-direction row-reverse !important
-    .flex-lg-column-reverse
-        -ms-flex-direction column-reverse !important
-        flex-direction column-reverse !important
-    .flex-lg-wrap
-        -ms-flex-wrap wrap !important
-        flex-wrap wrap !important
-    .flex-lg-nowrap
-        -ms-flex-wrap nowrap !important
-        flex-wrap nowrap !important
-    .flex-lg-wrap-reverse
-        -ms-flex-wrap wrap-reverse !important
-        flex-wrap wrap-reverse !important
-
-@media (min-width: $grid-xl)
-    .flex-xl-row
-        -ms-flex-direction row !important
-        flex-direction row !important
-    .flex-xl-column
-        -ms-flex-direction column !important
-        flex-direction column !important
-    .flex-xl-row-reverse
-        -ms-flex-direction row-reverse !important
-        flex-direction row-reverse !important
-    .flex-xl-column-reverse
-        -ms-flex-direction column-reverse !important
-        flex-direction column-reverse !important
-    .flex-xl-wrap
-        -ms-flex-wrap wrap !important
-        flex-wrap wrap !important
-    .flex-xl-nowrap
-        -ms-flex-wrap nowrap !important
-        flex-wrap nowrap !important
-    .flex-xl-wrap-reverse
-        -ms-flex-wrap wrap-reverse !important
-        flex-wrap wrap-reverse !important
+if $flex-xl-include
+  @media (min-width: $grid-xl)
+        for i in row row-reverse column column-reverse
+          flex(i,direction,-xl)
+        for i in wrap nowrap wrap-reverse
+          flex(i,wrap,-xl)

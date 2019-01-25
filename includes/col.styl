@@ -1,3 +1,22 @@
+col()
+  .col{arguments}
+      -ms-flex 0 0 auto
+      flex 0 0 auto
+      width auto
+      max-width none
+
+col-auto()
+  .col-{arguments}auto
+      -ms-flex 0 0 auto
+      flex 0 0 auto
+      width auto
+      max-width none
+
+col-attr()
+  -ms-flex: 0 0 arguments
+  flex: 0 0 arguments
+  max-width: arguments
+
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
@@ -10,319 +29,41 @@
     padding-right 15px
     padding-left 15px
 
-.col
-    -ms-flex-preferred-size 0
-    flex-basis 0
-    -ms-flex-positive 1
-    flex-grow 1
-    max-width 100%
+if $col-include
+  col()
+  col-auto()
+  for key in (1..12)
+    .col-{key}
+      col-attr: round((key * 100 / 12)%,6)
 
-.col-auto
-    -ms-flex 0 0 auto
-    flex 0 0 auto
-    width auto
-    max-width none
+if $col-sm-include
+  @media (min-width: $grid-sm)
+      col(-sm)
+      col-auto(sm-)
+      for key in (1..12)
+        .col-sm-{key}
+          col-attr: round((key * 100 / 12)%,6)
 
-.col-1
-    -ms-flex 0 0 8.333333%
-    flex 0 0 8.333333%
-    max-width 8.333333%
+if $col-md-include
+  @media (min-width: $grid-md)
+      col(-md)
+      col-auto(md-)
+      for key in (1..12)
+        .col-md-{key}
+          col-attr: round((key * 100 / 12)%,6)
 
-.col-2
-    -ms-flex 0 0 16.666667%
-    flex 0 0 16.666667%
-    max-width 16.666667%
+if $col-lg-include
+  @media (min-width: $grid-lg)
+      col(-lg)
+      col-auto(lg-)
+      for key in (1..12)
+        .col-lg-{key}
+          col-attr: round((key * 100 / 12)%,6)
 
-.col-3
-    -ms-flex 0 0 25%
-    flex 0 0 25%
-    max-width 25%
-
-.col-4
-    -ms-flex 0 0 33.333333%
-    flex 0 0 33.333333%
-    max-width 33.333333%
-
-.col-5
-    -ms-flex 0 0 41.666667%
-    flex 0 0 41.666667%
-    max-width 41.666667%
-
-.col-6
-    -ms-flex 0 0 50%
-    flex 0 0 50%
-    max-width 50%
-
-.col-7
-    -ms-flex 0 0 58.333333%
-    flex 0 0 58.333333%
-    max-width 58.333333%
-
-.col-8
-    -ms-flex 0 0 66.666667%
-    flex 0 0 66.666667%
-    max-width 66.666667%
-
-.col-9
-    -ms-flex 0 0 75%
-    flex 0 0 75%
-    max-width 75%
-
-.col-10
-    -ms-flex 0 0 83.333333%
-    flex 0 0 83.333333%
-    max-width 83.333333%
-
-.col-11
-    -ms-flex 0 0 91.666667%
-    flex 0 0 91.666667%
-    max-width 91.666667%
-
-.col-12
-    -ms-flex 0 0 100%
-    flex 0 0 100%
-    max-width 100%
-
-@media (min-width: $grid-sm)
-    .col-sm
-        -ms-flex-preferred-size 0
-        flex-basis 0
-        -ms-flex-positive 1
-        flex-grow 1
-        max-width 100%
-    .col-sm-auto
-        -ms-flex 0 0 auto
-        flex 0 0 auto
-        width auto
-        max-width none
-    .col-sm-1
-        -ms-flex 0 0 8.333333%
-        flex 0 0 8.333333%
-        max-width 8.333333%
-    .col-sm-2
-        -ms-flex 0 0 16.666667%
-        flex 0 0 16.666667%
-        max-width 16.666667%
-    .col-sm-3
-        -ms-flex 0 0 25%
-        flex 0 0 25%
-        max-width 25%
-    .col-sm-4
-        -ms-flex 0 0 33.333333%
-        flex 0 0 33.333333%
-        max-width 33.333333%
-    .col-sm-5
-        -ms-flex 0 0 41.666667%
-        flex 0 0 41.666667%
-        max-width 41.666667%
-    .col-sm-6
-        -ms-flex 0 0 50%
-        flex 0 0 50%
-        max-width 50%
-    .col-sm-7
-        -ms-flex 0 0 58.333333%
-        flex 0 0 58.333333%
-        max-width 58.333333%
-    .col-sm-8
-        -ms-flex 0 0 66.666667%
-        flex 0 0 66.666667%
-        max-width 66.666667%
-    .col-sm-9
-        -ms-flex 0 0 75%
-        flex 0 0 75%
-        max-width 75%
-    .col-sm-10
-        -ms-flex 0 0 83.333333%
-        flex 0 0 83.333333%
-        max-width 83.333333%
-    .col-sm-11
-        -ms-flex 0 0 91.666667%
-        flex 0 0 91.666667%
-        max-width 91.666667%
-    .col-sm-12
-        -ms-flex 0 0 100%
-        flex 0 0 100%
-        max-width 100%
-
-@media (min-width: $grid-md)
-    .col-md
-        -ms-flex-preferred-size 0
-        flex-basis 0
-        -ms-flex-positive 1
-        flex-grow 1
-        max-width 100%
-    .col-md-auto
-        -ms-flex 0 0 auto
-        flex 0 0 auto
-        width auto
-        max-width none
-    .col-md-1
-        -ms-flex 0 0 8.333333%
-        flex 0 0 8.333333%
-        max-width 8.333333%
-    .col-md-2
-        -ms-flex 0 0 16.666667%
-        flex 0 0 16.666667%
-        max-width 16.666667%
-    .col-md-3
-        -ms-flex 0 0 25%
-        flex 0 0 25%
-        max-width 25%
-    .col-md-4
-        -ms-flex 0 0 33.333333%
-        flex 0 0 33.333333%
-        max-width 33.333333%
-    .col-md-5
-        -ms-flex 0 0 41.666667%
-        flex 0 0 41.666667%
-        max-width 41.666667%
-    .col-md-6
-        -ms-flex 0 0 50%
-        flex 0 0 50%
-        max-width 50%
-    .col-md-7
-        -ms-flex 0 0 58.333333%
-        flex 0 0 58.333333%
-        max-width 58.333333%
-    .col-md-8
-        -ms-flex 0 0 66.666667%
-        flex 0 0 66.666667%
-        max-width 66.666667%
-    .col-md-9
-        -ms-flex 0 0 75%
-        flex 0 0 75%
-        max-width 75%
-    .col-md-10
-        -ms-flex 0 0 83.333333%
-        flex 0 0 83.333333%
-        max-width 83.333333%
-    .col-md-11
-        -ms-flex 0 0 91.666667%
-        flex 0 0 91.666667%
-        max-width 91.666667%
-    .col-md-12
-        -ms-flex 0 0 100%
-        flex 0 0 100%
-        max-width 100%
-
-@media (min-width: $grid-lg)
-    .col-lg
-        -ms-flex-preferred-size 0
-        flex-basis 0
-        -ms-flex-positive 1
-        flex-grow 1
-        max-width 100%
-    .col-lg-auto
-        -ms-flex 0 0 auto
-        flex 0 0 auto
-        width auto
-        max-width none
-    .col-lg-1
-        -ms-flex 0 0 8.333333%
-        flex 0 0 8.333333%
-        max-width 8.333333%
-    .col-lg-2
-        -ms-flex 0 0 16.666667%
-        flex 0 0 16.666667%
-        max-width 16.666667%
-    .col-lg-3
-        -ms-flex 0 0 25%
-        flex 0 0 25%
-        max-width 25%
-    .col-lg-4
-        -ms-flex 0 0 33.333333%
-        flex 0 0 33.333333%
-        max-width 33.333333%
-    .col-lg-5
-        -ms-flex 0 0 41.666667%
-        flex 0 0 41.666667%
-        max-width 41.666667%
-    .col-lg-6
-        -ms-flex 0 0 50%
-        flex 0 0 50%
-        max-width 50%
-    .col-lg-7
-        -ms-flex 0 0 58.333333%
-        flex 0 0 58.333333%
-        max-width 58.333333%
-    .col-lg-8
-        -ms-flex 0 0 66.666667%
-        flex 0 0 66.666667%
-        max-width 66.666667%
-    .col-lg-9
-        -ms-flex 0 0 75%
-        flex 0 0 75%
-        max-width 75%
-    .col-lg-10
-        -ms-flex 0 0 83.333333%
-        flex 0 0 83.333333%
-        max-width 83.333333%
-    .col-lg-11
-        -ms-flex 0 0 91.666667%
-        flex 0 0 91.666667%
-        max-width 91.666667%
-    .col-lg-12
-        -ms-flex 0 0 100%
-        flex 0 0 100%
-        max-width 100%
-
-@media (min-width: $grid-xl)
-    .col-xl
-        -ms-flex-preferred-size 0
-        flex-basis 0
-        -ms-flex-positive 1
-        flex-grow 1
-        max-width 100%
-    .col-xl-auto
-        -ms-flex 0 0 auto
-        flex 0 0 auto
-        width auto
-        max-width none
-    .col-xl-1
-        -ms-flex 0 0 8.333333%
-        flex 0 0 8.333333%
-        max-width 8.333333%
-    .col-xl-2
-        -ms-flex 0 0 16.666667%
-        flex 0 0 16.666667%
-        max-width 16.666667%
-    .col-xl-3
-        -ms-flex 0 0 25%
-        flex 0 0 25%
-        max-width 25%
-    .col-xl-4
-        -ms-flex 0 0 33.333333%
-        flex 0 0 33.333333%
-        max-width 33.333333%
-    .col-xl-5
-        -ms-flex 0 0 41.666667%
-        flex 0 0 41.666667%
-        max-width 41.666667%
-    .col-xl-6
-        -ms-flex 0 0 50%
-        flex 0 0 50%
-        max-width 50%
-    .col-xl-7
-        -ms-flex 0 0 58.333333%
-        flex 0 0 58.333333%
-        max-width 58.333333%
-    .col-xl-8
-        -ms-flex 0 0 66.666667%
-        flex 0 0 66.666667%
-        max-width 66.666667%
-    .col-xl-9
-        -ms-flex 0 0 75%
-        flex 0 0 75%
-        max-width 75%
-    .col-xl-10
-        -ms-flex 0 0 83.333333%
-        flex 0 0 83.333333%
-        max-width 83.333333%
-    .col-xl-11
-        -ms-flex 0 0 91.666667%
-        flex 0 0 91.666667%
-        max-width 91.666667%
-    .col-xl-12
-        -ms-flex 0 0 100%
-        flex 0 0 100%
-        max-width 100%
+if $col-xl-include
+  @media (min-width: $grid-xl)
+      col(-xl)
+      col-auto(xl-)
+      for key in (1..12)
+        .col-xl-{key}
+          col-attr: round((key * 100 / 12)%,6)

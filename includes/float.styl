@@ -1,40 +1,28 @@
-.float-left
-    float left !important
+if $float-base-include
+  for i in $floatDirections
+    .float-{i}
+      float i !important
 
-.float-right
-    float right !important
+if $float-sm-include
+  @media (min-width: $grid-sm)
+    for i in $floatDirections
+      .float-sm-{i}
+        float i !important
 
-.float-none
-    float none !important
+if $float-md-include
+  @media (min-width: $grid-md)
+    for i in $floatDirections
+      .float-md-{i}
+        float i !important
 
-@media (min-width: $grid-sm)
-    .float-sm-left
-        float left !important
-    .float-sm-right
-        float right !important
-    .float-sm-none
-        float none !important
+if $float-lg-include
+  @media (min-width: $grid-lg)
+    for i in $floatDirections
+      .float-lg-{i}
+        float i !important
 
-@media (min-width: $grid-md)
-    .float-md-left
-        float left !important
-    .float-md-right
-        float right !important
-    .float-md-none
-        float none !important
-
-@media (min-width: $grid-lg)
-    .float-lg-left
-        float left !important
-    .float-lg-right
-        float right !important
-    .float-lg-none
-        float none !important
-
-@media (min-width: $grid-xl)
-    .float-xl-left
-        float left !important
-    .float-xl-right
-        float right !important
-    .float-xl-none
-        float none !important
+if $float-xl-include
+  @media (min-width: $grid-xl)
+    for i in $floatDirections
+      .float-xl-{i}
+        float i !important
